@@ -18,7 +18,7 @@ A Next.js application demonstrating integration with multiple payment gateways i
 
 Before you begin, ensure you have:
 
-- Node.js 18+ installed
+- Next.js(latest) installed
 - Payment gateway test credentials:
   - eSewa Merchant Code and Secret Key
   - Khalti Public and Secret Keys
