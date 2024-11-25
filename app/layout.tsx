@@ -17,15 +17,14 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: {
     template: "%s | Multi-Payment Gateway Integration",
-    default: "Multi-Payment Gateway Integration - eSewa, Khalti, Stripe",
+    default: "Multi-Payment Gateway Integration - eSewa, Khalti",
   },
   description:
-    "Secure payment processing with multiple gateway support including eSewa, Khalti, and Stripe. Built with Next.js and TypeScript.",
+    "Secure payment processing with multiple gateway support including eSewa and Khalti. Built with Next.js and TypeScript.",
   keywords: [
     "payment gateway",
     "esewa payment",
     "khalti payment",
-    "stripe payment",
     "nepal payment gateway",
     "nextjs payment",
     "typescript payment integration",
@@ -44,9 +43,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Multi-Payment Gateway Integration",
-    title: "Multi-Payment Gateway Integration - eSewa, Khalti, Stripe",
+    title: "Multi-Payment Gateway Integration - eSewa, Khalti",
     description:
-      "Secure payment processing with multiple gateway support including eSewa, Khalti, and Stripe.",
+      "Secure payment processing with multiple gateway support including eSewa and Khalti.",
     images: [
       {
         url: "/og-image.png",
@@ -59,8 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Multi-Payment Gateway Integration",
-    description:
-      "Secure payment processing with eSewa, Khalti, and Stripe integration.",
+    description: "Secure payment processing with eSewa and Khalti integration.",
     images: ["/twitter-image.png"],
     creator: "@ronishpaudel",
     site: "@ronishpaudel",
@@ -107,10 +105,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.stripe.com https://rc-epay.esewa.com.np https://khalti.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://checkout.stripe.com https://rc-epay.esewa.com.np https://khalti.com;"
-        />
+
         <meta name="theme-color" content="#ffffff" />
         <link rel="canonical" href={process.env.NEXT_PUBLIC_BASE_URL} />
       </head>
