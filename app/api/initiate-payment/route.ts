@@ -1,21 +1,14 @@
 import { NextResponse } from "next/server";
-import Stripe from "stripe";
+
 import { v4 as uuidv4 } from "uuid";
 import { generateEsewaSignature } from "@/lib/generateEsewaSignature";
 import { PaymentMethod, PaymentRequestData } from "@/lib/types";
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2024-11-20.acacia",
-});
-
 function validateEnvironmentVariables() {
   const requiredEnvVars = [
     "NEXT_PUBLIC_BASE_URL",
     "NEXT_PUBLIC_ESEWA_MERCHANT_CODE",
     "NEXT_PUBLIC_ESEWA_SECRET_KEY",
     "NEXT_PUBLIC_KHALTI_SECRET_KEY",
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
-    "STRIPE_SECRET_KEY",
   ];
 
   for (const envVar of requiredEnvVars) {
@@ -44,35 +37,6 @@ export async function POST(req: Request) {
     }
 
     switch (method as PaymentMethod) {
-      case "stripe": {
-        console.log("Initiating Stripe payment");
-        const session = await stripe.checkout.sessions.create({
-          payment_method_types: ["card"],
-          line_items: [
-            {
-              price_data: {
-                currency: "npr",
-                product_data: {
-                  name: productName,
-                },
-                unit_amount: Math.round(parseFloat(amount) * 100),
-              },
-              quantity: 1,
-            },
-          ],
-          mode: "payment",
-          success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success?method=stripe`,
-          cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-          metadata: {
-            title: productName,
-            transactionId,
-          },
-        });
-
-        console.log("Stripe session created:", session.id);
-        return NextResponse.json({ sessionId: session.id });
-      }
-
       case "esewa": {
         console.log("Initiating eSewa payment");
         const transactionUuid = `${Date.now()}-${uuidv4()}`;

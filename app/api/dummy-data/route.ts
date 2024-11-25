@@ -21,13 +21,6 @@ export async function GET(request: Request) {
         transactionId: `KHALTI-${generateId()}`,
       });
 
-    case "stripe":
-      return NextResponse.json({
-        amount: "300",
-        productName: "Stripe Test Product",
-        transactionId: `STRIPE-${generateId()}`,
-      });
-
     default:
       return NextResponse.json(
         { error: "Invalid payment method" },
