@@ -1,14 +1,10 @@
-export type PaymentMethod = "stripe" | "esewa" | "khalti";
+export type PaymentMethod = "esewa" | "khalti";
 
 export interface PaymentRequestData {
   amount: string;
   productName: string;
   transactionId: string;
   method: PaymentMethod;
-}
-
-export interface StripeResponse {
-  sessionId: string;
 }
 
 export interface EsewaConfigData {
