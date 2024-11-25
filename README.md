@@ -1,37 +1,44 @@
-# Payment Integration Project
+# Next.js Payment Gateway Integration
 
-A Next.js application demonstrating integration with multiple payment gateways including eSewa, Khalti, and Stripe.
+A modern payment gateway integration demonstrating the implementation of eSewa and Khalti payment services in Next.js 14 with Server Actions.
+
+## Overview
+
+This project showcases a seamless integration of popular Nepali payment gateways using Next.js and TypeScript. It features a clean, responsive interface and implements secure payment processing using Server Actions.
+
+## Live Demo
+
+Experience the payment gateway integration in action:
+[Live Demo](https://payment-gateway-mu-gold.vercel.app/)
 
 ## Features
 
-- Multiple payment gateway integrations
-  - eSewa (Nepal)
-  - Khalti (Nepal)
-  - Stripe (International)
-- Responsive design using Tailwind CSS
-- Type-safe development with TypeScript
-- Server-side payment processing
-- Payment status verification
-- Error handling and logging
+- eSewa payment integration
+- Khalti payment integration
+- Server Actions for secure payment processing
+- TypeScript implementation
+- Responsive design
+- Error handling and validation
+- Test environment setup
 
-## Prerequisites
+## Documentation
 
-Before you begin, ensure you have:
+For a detailed guide on implementing these payment gateways, check out our comprehensive blog post:
+[Integrating eSewa and Khalti Payment Gateways in Next.js 14](https://medium.com/@paudelronish/integrating-esewa-and-khalti-payment-gateways-in-next-js-14-with-server-actions-f15729ffae3e)
 
-- Next.js(latest) installed
-- Payment gateway test credentials:
-  - eSewa Merchant Code and Secret Key
-  - Khalti Public and Secret Keys
-  - Stripe Public and Secret Keys
+## Getting Started
 
-## Environment Variables
+1. Clone the repository
+2. Set up environment variables
+3. Install dependencies
+4. Run the development server
 
-Create a `.env.local` file with:
+For detailed implementation instructions and code examples, please refer to the blog post.
 
-```env
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-NEXT_PUBLIC_ESEWA_MERCHANT_CODE=your_merchant_code
-NEXT_PUBLIC_ESEWA_SECRET_KEY=your_secret_key
-NEXT_PUBLIC_KHALTI_SECRET_KEY=your_khalti_key
-STRIPE_SECRET_KEY=your_stripe_key
-```
+## Support
+
+If you find this project helpful, please consider giving it a star ⭐
+
+## License
+
+MIT License - feel free to use this project as a reference for your own implementations.
