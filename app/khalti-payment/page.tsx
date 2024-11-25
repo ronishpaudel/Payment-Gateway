@@ -82,7 +82,7 @@ export default function KhaltiPayment() {
         strategy="lazyOnload"
       />
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
-        <Card className="w-full max-w-md">
+        <Card className="w-full max-w-md mx-4">
           <CardHeader>
             <CardTitle>Khalti Payment</CardTitle>
             <CardDescription>Enter payment details for Khalti</CardDescription>

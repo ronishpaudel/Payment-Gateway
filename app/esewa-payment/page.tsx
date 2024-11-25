@@ -148,7 +148,7 @@ export default function EsewaPayment() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-md mx-4">
         <CardHeader>
           <CardTitle>eSewa Payment</CardTitle>
           <CardDescription>Enter payment details for eSewa</CardDescription>

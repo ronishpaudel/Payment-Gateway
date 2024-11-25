@@ -17,7 +17,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const paymentMethods = [
   { name: "eSewa", color: "bg-green-500" },
   { name: "Khalti", color: "bg-purple-500" },
-  { name: "Stripe", color: "bg-blue-500" },
 ];
 
 const containerVariants = {
@@ -69,9 +68,6 @@ export default function PaymentMethods() {
 
   const handlePayment = (method: string) => {
     switch (method) {
-      case "Stripe":
-        push("/stripe-payment");
-        break;
       case "eSewa":
         push("/esewa-payment");
         break;
